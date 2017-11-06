@@ -1,4 +1,4 @@
 # BreathBox
 
-![alt text](http://url/to/img.png)
-![alt text](http://url/to/img.png)
+![alt text](https://github.com/zhitianz/BreathBox/blob/master/1.png)
+![alt text](https://github.com/zhitianz/BreathBox/blob/master/2.png)
