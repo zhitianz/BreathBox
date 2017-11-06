@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+  <meta charset="UTF-8">
+  <title>BreathBox, by PNAH LLC</title>
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/styles.css">
+  <script src="/socket.io/socket.io.js"></script>
+  <%- defineContent('scriptHold') %>
+<body>
+  <header>
+  
+    <nav class="navbar navbar-inverse">
+      <a href="/" class="navbar-brand">BreathBox </a>
+      <ul class="nav navbar-nav">
+        <li><a href="/about">User Manual</a></li>
+        <li><a href="/contact">BreathBox Game</a></li>
+      </ul>
+  <img src="/img/hotboxlogo.png"  width="50" height ="50" />
+    </nav>
+  </header>
+  
+ 
+<!--CONTENT -->
+<%- defineContent('hero') %>  
+
+<main>
+  <div class="container">
+    <%- defineContent('body') %>
+</div>
+</main>
+
+ 
+    <footer>
+       Copyright PNAH - Probably Not a Hotbox LLC. <img src="/img/hotboxlogo.png"  width="50" height ="50" />
+    </footer>
+</body>
+</html>

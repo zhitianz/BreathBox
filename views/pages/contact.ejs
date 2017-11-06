@@ -1,0 +1,56 @@
+<%- contentFor('scriptHold') %>
+<script src="/static/trivia.js"></script>
+<script src="/static/clientTable.js"></script>
+<%- contentFor('hero') %>
+<section class="hero">
+    <div class="hero-content">
+      <h2>BreathBox Trivia Game</h2>
+      <a href ="/" class="btn btn-lg btn-primary">BreathBox</a>
+     </div>
+    </section>
+   
+        <%- contentFor('body') %>
+         <div class="jumbotron text-center">
+          <h1> Connected users </h1>
+  	  <div id = "alert_placeholder"></div>
+	   
+	 <table class="table table-striped">
+	   <thead>
+             <tr>
+               <th>User Name</th>
+               <th>Score</th>
+               <th>BAC</th>
+             </tr>
+            </thead>
+             <tbody>
+             <% for(var i = 0; i < users.length; i++){ console.log(users.length);%>
+               <tr>
+               <td><%=users[i].getName()%> </td>  
+	       <td><%=users[i].getScore()%> </td>  
+	       <td><%=users[i].getBAC()%> </td>  
+               </tr>
+             <% } %>
+        </tbody> 
+        </table>
+        <div  id="trivia_position" style="display:none;">
+        <form class="form-control">
+         <label id="questLabel">Temp</label> </br>
+         <input type="radio" name="ans" id="A"> <span id="ansA">Temp</span>
+	 <input type="radio" name="ans" id="B"> <span id="ansB">Temp</span>
+	 </br>
+	<input type="radio" name="ans" id="C"> <span id="ansC">Temp</span>
+	<input type="radio" name="ans" id="D"> <span id="ansD">Temp</span>
+	</br>
+	<label id="blownLabel">Please Blow!</label>
+	</br>
+        <button id="trivsub" style ="display:none;" type="button" class="btn btn-primary btn-lg" onClick="submitTrivia()">Submit Answer</button>
+        </form>
+        </div>
+	</br>
+	<form>
+      
+	<button style="display:none;" type="button" class="btn btn-primary btn-lg" onClick="requestTrivia()" id="rtb">Request Trivia</button>
+	</form>
+        </div> 
+	</div>
+     
